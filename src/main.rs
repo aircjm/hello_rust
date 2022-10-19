@@ -7,16 +7,16 @@ fn main() {
     println!("Hello, world!");
 
     let email = Message::builder()
-        .from("admin <admin@chenjiaming.org>".parse().unwrap())
+        .from("admin <public@chenjiaming.org>".parse().unwrap())
         .reply_to("aircjm <aircjm@gmail.com>".parse().unwrap())
         .to("aircjm <aircjm@gmail.com>".parse().unwrap())
         .subject("Happy new year")
-        .body(String::from("Be happy!"))
+        .body(String::from("Be happy!\n https://weread.qq.com/"))
         .unwrap();
 
     let creds = Credentials::new(
-        "admin@chenjiaming.org".to_string(),
-        "mgErTxRFBsSndYIY".to_string(),
+        "public@chenjiaming.org".to_string(),
+        "AeBm8jUMezYWfBjp".to_string(),
     );
 
     // Open a remote connection to gmail
